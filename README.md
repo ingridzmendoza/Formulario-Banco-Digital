@@ -1,59 +1,139 @@
-# BancoDigitalForm
+# Formulario de Registro de Usuario - Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.6.
+## Descripción
 
-## Development server
+Este proyecto consiste en la creación de un **formulario de registro de usuarios** para un banco digital utilizando **Angular** y **Reactive Forms**.
+El formulario valida los datos en tiempo real, muestra mensajes de error amigables y evita el envío de información inválida.
 
-To start a local development server, run:
+El objetivo principal es practicar el uso de formularios avanzados en Angular aplicando validaciones síncronas y asíncronas.
 
-```bash
+---
+
+## Tecnologías utilizadas
+
+* Angular
+* TypeScript
+* HTML
+* CSS
+* Reactive Forms
+
+---
+
+## Funcionalidades
+
+El formulario incluye:
+
+* Validación en tiempo real
+* Confirmación de contraseña
+* Validación de edad mínima
+* Validación asíncrona de email (simulación)
+* Mensajes de error específicos por campo
+* Deshabilitar el botón de envío si el formulario es inválido
+* Reset del formulario después de un envío exitoso
+* Simulación de envío a una API usando `setTimeout`
+* Manejo dinámico de teléfonos adicionales usando `FormArray`
+
+---
+
+## Campos del formulario
+
+* Nombre completo
+* Email
+* Contraseña
+* Confirmar contraseña
+* Edad
+* Teléfonos adicionales
+* Aceptación de términos y condiciones
+
+---
+
+## Conceptos aplicados
+
+Este proyecto utiliza los siguientes conceptos de Angular:
+
+* `FormGroup`
+* `FormControl`
+* `FormArray`
+* Validadores personalizados
+* Validaciones asíncronas
+* Uso de `touched` y `dirty`
+* Reactive Forms
+* Manejo de estados del formulario
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+│
+├── app/
+│   ├── app.ts
+│   ├── app.html
+│   ├── app.css
+│   ├── app.config.ts
+│   └── app.routes.ts
+│
+├── styles.css
+├── index.html
+└── main.ts
+```
+
+---
+
+## Cómo ejecutar el proyecto
+
+1. Instalar dependencias:
+
+```
+npm install
+```
+
+2. Ejecutar el servidor de desarrollo:
+
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+3. Abrir en el navegador:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## Evidencia
 
-## Building
+### Validación de nombre
+![Registro](public/assets/sin-nombre.png)
+![Registro](public/assets/nombre-incompleto.png)
 
-To build the project run:
 
-```bash
-ng build
-```
+### Validación de correo
+![Registro](public/assets/correo-no-valido.png)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
+### Validación de contraseña
+![Registro](public/assets/sin-contra.png)
+![Registro](public/assets/contra-no-valida.png)
+![Registro](public/assets/contra-no-coinciden.png)
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
 
-```bash
-ng test
-```
+### Validación de edad
+![Registro](public/assets/sin-edad.png)
+![Registro](public/assets/edad-menor.png)
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+### Validación de teléfonos
+![Registro](public/assets/telefono.png)
 
-```bash
-ng e2e
-```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Validación de registro
+![Registro](public/assets/no-registro.png)
+![Registro](public/assets/registro.png)
+![Registro](public/assets/registro-exitoso.png)
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
